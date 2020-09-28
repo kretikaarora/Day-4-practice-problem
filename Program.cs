@@ -33,11 +33,11 @@ namespace day4_assignment
                     START_POSITION = START_POSITION + 0;
 
                 }
-                Console.WriteLine("die number is {0}",dieNumber);
-                Console.WriteLine("startposition is {0}",START_POSITION);
+                //Console.WriteLine("die number is {0}",dieNumber);
+                //Console.WriteLine("startposition is {0}",START_POSITION);
             }
-            Console.WriteLine("die number is {0}", dieNumber);
-            Console.WriteLine("The final postion is {0}",START_POSITION);
+            //Console.WriteLine("die number is {0}", dieNumber);
+            //Console.WriteLine("The final postion is {0}",START_POSITION);
         }
 
 
