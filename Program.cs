@@ -11,6 +11,7 @@ namespace day4_assignment
             const int  NO_PLAY= 0;
             const int LADDER = 1;
             const int SNAKE = 2;
+            int noOfTimesDiceThrown=0;
 
             int dieNumber=2;
             while (START_POSITION < 100)
@@ -33,11 +34,12 @@ namespace day4_assignment
                     START_POSITION = START_POSITION + 0;
 
                 }
-                //Console.WriteLine("die number is {0}",dieNumber);
-                //Console.WriteLine("startposition is {0}",START_POSITION);
+                noOfTimesDiceThrown++;
+                Console.WriteLine("die number is {0}",dieNumber);
+                Console.WriteLine("startposition is {0}",START_POSITION);
             }
-            //Console.WriteLine("die number is {0}", dieNumber);
-            //Console.WriteLine("The final postion is {0}",START_POSITION);
+            Console.WriteLine("The number of times die thrown is {0}", noOfTimesDiceThrown);
+            Console.WriteLine("The final postion is {0}",START_POSITION);
         }
 
 
