@@ -42,8 +42,7 @@ namespace SnakeAndLadder
                     {
                         case NO_PLAY:
                             {
-                                
-                                break;
+                                 break;
                             }
 
                         case LADDER:
@@ -51,13 +50,10 @@ namespace SnakeAndLadder
                                 if (currentPlayersPosition[currentPosition] + dieNumber > 100)
                                 {
                                     continue;
-
                                 }
 
                                 else
                                     currentPlayersPosition[currentPosition] += dieNumber;
-
-
 
                                 break;
                             }
@@ -73,9 +69,6 @@ namespace SnakeAndLadder
                                 
                                 break;
                             }
-
-
-
                     }
                 } while (choice == LADDER);
                 if (currentPosition < noOfPlayers - 1) currentPosition++;
