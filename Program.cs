@@ -1,46 +1,109 @@
 ﻿using System;
+using System.Runtime.InteropServices;
+using System.Xml.Serialization;
 
-namespace day4_assignment
+namespace SnakeAndLadder
 {
     class Program
     {
         static void Main(string[] args)
         {
-            int START_POSITION = 0;
-            Random rand = new Random();
-            const int  NO_PLAY= 0;
+
+            const int NO_PLAY = 0;
             const int LADDER = 1;
             const int SNAKE = 2;
-            int noOfTimesDiceThrown=0;
+            int winningPosition = 100;
+            int startPosition = 0;
+            Random rand = new Random();
+            int choice ;
+            Console.WriteLine("welcome to snake and ladder simulator");
+            Console.WriteLine("Enter the no of players");
+            int noOfPlayers = Convert.ToInt32(Console.ReadLine());
+            int[] currentPlayersPosition = new int[noOfPlayers];
 
-            int dieNumber=2;
-            while (START_POSITION < 100)
+
+
+
+            int currentPosition = 0;
+            for (int i = 0; i < noOfPlayers; i++)
             {
-
-                dieNumber = rand.Next(1, 7);
-
-                if (dieNumber % 3 == LADDER)
-                {
-                    START_POSITION = START_POSITION + dieNumber;
-                    if (START_POSITION == 100) break;
-                    else if (START_POSITION > 100) START_POSITION -= dieNumber;
-                }
-                else if (dieNumber % 3 == SNAKE && START_POSITION >= dieNumber)
-                {
-                    START_POSITION = START_POSITION - dieNumber;
-                }
-                else
-                {
-                    START_POSITION = START_POSITION + 0;
-
-                }
-                noOfTimesDiceThrown++;
-                Console.WriteLine("die number is {0}",dieNumber);
-                Console.WriteLine("startposition is {0}",START_POSITION);
+                currentPlayersPosition[i] = 0;
             }
-            Console.WriteLine("The number of times die thrown is {0}", noOfTimesDiceThrown);
-            Console.WriteLine("The final postion is {0}",START_POSITION);
+
+            while (currentPlayersPosition[currentPosition] < winningPosition)
+            {
+                
+                
+                do
+                {
+                    int dieNumber = rand.Next(0, 7);
+                    choice = rand.Next(0, 3);
+                    switch (choice)
+                    {
+                        case NO_PLAY:
+                            {
+                                
+                                break;
+                            }
+
+                        case LADDER:
+                            {
+                                if (currentPlayersPosition[currentPosition] + dieNumber > 100)
+                                {
+                                    continue;
+
+                                }
+
+                                else
+                                    currentPlayersPosition[currentPosition] += dieNumber;
+
+
+
+                                break;
+                            }
+
+                        case SNAKE:
+                            {
+                                if (currentPlayersPosition[currentPosition] - dieNumber > 0)
+                                {
+                                    currentPlayersPosition[currentPosition] -= dieNumber;
+                                }
+                                else
+                                    currentPlayersPosition[currentPosition] = startPosition;
+                                
+                                break;
+                            }
+
+
+
+                    }
+                } while (choice == LADDER);
+                if (currentPosition < noOfPlayers - 1) currentPosition++;
+                else currentPosition = startPosition;
+
+                for (int i = 0; i < noOfPlayers; i++)
+                {
+                    Console.WriteLine("Player " + (i + 1) + ", currentPosition " + currentPlayersPosition[i]);
+                }
+                if (currentPlayersPosition[currentPosition] == 100)
+                {
+                    Console.WriteLine("player {0} is the winner congratulations",(currentPosition+1));
+                }
+
+
+
+
+
+
+            }
+            
         }
+
+    
+            
+
+
+
 
 
 
@@ -49,4 +112,5 @@ namespace day4_assignment
 
         }
     }
+
 
