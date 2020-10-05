@@ -20,10 +20,6 @@ namespace SnakeAndLadder
             Console.WriteLine("Enter the no of players");
             int noOfPlayers = Convert.ToInt32(Console.ReadLine());
             int[] currentPlayersPosition = new int[noOfPlayers];
-
-
-
-
             int currentPosition = 0;
             for (int i = 0; i < noOfPlayers; i++)
             {
@@ -31,10 +27,8 @@ namespace SnakeAndLadder
             }
 
             while (currentPlayersPosition[currentPosition] < winningPosition)
-            {
-                
-                
-                do
+            {              
+               do
                 {
                     int dieNumber = rand.Next(0, 7);
                     choice = rand.Next(0, 3);
@@ -83,24 +77,9 @@ namespace SnakeAndLadder
                     Console.WriteLine("player {0} is the winner congratulations",(currentPosition+1));
                 }
 
-
-
-
-
-
             }
             
         }
-
-    
-            
-
-
-
-
-
-
-
 
 
         }
