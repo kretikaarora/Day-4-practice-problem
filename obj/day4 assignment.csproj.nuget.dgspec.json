@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Administrator\\Desktop\\assignment day4\\day4 assignment\\day4 assignment\\day4 assignment.csproj": {}
+    "C:\\Users\\Administrator\\Desktop\\snake and ladder\\day4 assignment\\day4 assignment\\day4 assignment.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Administrator\\Desktop\\assignment day4\\day4 assignment\\day4 assignment\\day4 assignment.csproj": {
+    "C:\\Users\\Administrator\\Desktop\\snake and ladder\\day4 assignment\\day4 assignment\\day4 assignment.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Administrator\\Desktop\\assignment day4\\day4 assignment\\day4 assignment\\day4 assignment.csproj",
+        "projectUniqueName": "C:\\Users\\Administrator\\Desktop\\snake and ladder\\day4 assignment\\day4 assignment\\day4 assignment.csproj",
         "projectName": "day4 assignment",
-        "projectPath": "C:\\Users\\Administrator\\Desktop\\assignment day4\\day4 assignment\\day4 assignment\\day4 assignment.csproj",
+        "projectPath": "C:\\Users\\Administrator\\Desktop\\snake and ladder\\day4 assignment\\day4 assignment\\day4 assignment.csproj",
         "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Administrator\\Desktop\\assignment day4\\day4 assignment\\day4 assignment\\obj\\",
+        "outputPath": "C:\\Users\\Administrator\\Desktop\\snake and ladder\\day4 assignment\\day4 assignment\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
